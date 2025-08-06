@@ -2,10 +2,6 @@
 /dist
 /node_modules
 /postgres
-/static/products/*.jpg
-/static/products/*.jpeg
-/static/products/*.png
-/static/products/*.gif
 
 # Environments
 .env
