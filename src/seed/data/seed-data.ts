@@ -1,4 +1,4 @@
-import { User } from 'src/auth/entities/user.entity';
+import * as bcrypt from 'bcrypt';
 
 interface SeedProduct {
   description: string;
@@ -33,13 +33,13 @@ export const initialData: SeedData = {
     {
       email: 'text1@google.com',
       fullName: 'Test One',
-      password: 'Abc123',
+      password: bcrypt.hashSync('Abc123', 10),
       roles: ['admin'],
     },
     {
       email: 'text2@google.com',
       fullName: 'Test Two',
-      password: 'Abc123',
+      password: bcrypt.hashSync('Abc123', 10),
       roles: ['user', 'super'],
     },
   ],
